@@ -1,5 +1,5 @@
 <?php
-namespace vendor\base;
+namespace ctur\base;
 /**
  * Class Enum
  * @author Cyril Turkevich
@@ -9,7 +9,7 @@ abstract class Enum
     /**
      * @var array $list data
      */
-    protected static $list = [];
+    protected static $list = array();
 
     /**
      * List data.

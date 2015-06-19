@@ -1,11 +1,11 @@
-# Enum base class
+# PHP Abstract Enum
 
 ## Example 
 ~~~
 <?php
 namespace app\enums;
 
-use vendor\base\Enum;
+use ctur\base\Enum;
 
 /**
  * @package app\enums
