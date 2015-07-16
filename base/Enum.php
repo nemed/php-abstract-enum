@@ -1,14 +1,13 @@
 <?php
 namespace ctur\base;
+
 /**
- * Class Enum
+ * Base class for enums.
  * @author Cyril Turkevich
  */
 abstract class Enum
 {
-    /**
-     * @var array $list data
-     */
+    /** @var array $list data. */
     protected static $list = array();
 
     /**
@@ -21,21 +20,22 @@ abstract class Enum
     }
 
     /**
-     * @param string $id
-     * @return string|null
+     * @param string $id index of array from listData()
+     * @return string|null index of array from listData()
      */
     public static function labelById($id)
     {
-        return isset(static::$list[$id]) ? static::$list[$id] : null;
+        $list = static::listData();
+        return isset($list[$id]) ? $list[$id] : null;
     }
 
     /**
-     * @param string $label
-     * @return string|null
+     * @param string $label index of array from listData()
+     * @return string|null index of array from listData()
      */
     public static function idByLabel($label)
     {
-        $list = array_flip(static::$list);
+        $list = array_flip(static::listData());
         return isset($list[$label]) ? $list[$label] : null;
     }
 }
